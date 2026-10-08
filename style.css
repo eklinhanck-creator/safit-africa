@@ -200,3 +200,7 @@ p { margin: 0 0 1em; }
   .gallery { grid-template-columns: 1fr; }
   .theme { flex-direction: column; gap: .6rem; }
 }
+
+.btn--dl { display: inline-flex; align-items: center; gap: .6em; margin-top: 1.2rem; }
+.btn--dl svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.btn--dl small { font-weight: 500; opacity: .8; font-size: .8em; }
