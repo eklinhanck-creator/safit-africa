@@ -50,7 +50,7 @@
     counters.forEach(function (el) { co.observe(el); });
   }
 
-  // Formulaire : ouvre le client mail avec le message pré-rempli (pas de serveur)
+  // Formulaire : envoi via Formspree, repli sur mailto en cas d échec
   var form = document.getElementById("contact-form");
   var note = document.getElementById("form-note");
   form.addEventListener("submit", function (e) {
@@ -63,17 +63,29 @@
     });
     if (!ok) { note.textContent = "Merci de renseigner les champs obligatoires."; return; }
     var d = new FormData(form);
-    var body = [
-      "Nom : " + d.get("nom"),
-      "Organisation : " + d.get("org"),
-      "E-mail : " + d.get("email"),
-      "Téléphone : " + (d.get("tel") || "-"),
-      "Offre souhaitée : " + d.get("offre"),
-      "",
-      d.get("msg") || ""
-    ].join("\n");
-    var subject = "SAFIT 2027 : demande de partenariat (" + d.get("org") + ")";
-    window.location.href = "mailto:africasoft@cagecfi.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    note.textContent = "Votre application mail va s'ouvrir. Si rien ne se passe, écrivez-nous à africasoft@cagecfi.com.";
+    var btn = form.querySelector("button[type=submit]");
+    btn.disabled = true;
+    note.textContent = "Envoi en cours...";
+    fetch(form.action, { method: "POST", body: d, headers: { Accept: "application/json" } })
+      .then(function (r) {
+        if (!r.ok) throw new Error("http " + r.status);
+        form.reset();
+        note.textContent = "Merci, votre demande est bien envoyée. Nous vous répondons rapidement.";
+      })
+      .catch(function () {
+        var body = [
+          "Nom : " + d.get("nom"),
+          "Organisation : " + d.get("org"),
+          "E-mail : " + d.get("email"),
+          "Téléphone : " + (d.get("tel") || "-"),
+          "Offre souhaitée : " + d.get("offre"),
+          "",
+          d.get("msg") || ""
+        ].join("\n");
+        var subject = "SAFIT 2027 : demande de partenariat (" + d.get("org") + ")";
+        note.textContent = "L'envoi a échoué. Votre application mail va s'ouvrir, ou écrivez-nous à africasoft@cagecfi.com.";
+        window.location.href = "mailto:africasoft@cagecfi.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      })
+      .finally(function () { btn.disabled = false; });
   });
 })();
