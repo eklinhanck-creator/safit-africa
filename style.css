@@ -204,3 +204,16 @@ p { margin: 0 0 1em; }
 .btn--dl { display: inline-flex; align-items: center; gap: .6em; margin-top: 1.2rem; }
 .btn--dl svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .btn--dl small { font-weight: 500; opacity: .8; font-size: .8em; }
+
+/* Presse */
+.press { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.press__card { display: flex; flex-direction: column; gap: .6rem; background: #fff; color: var(--ink); text-decoration: none; border-radius: var(--radius); padding: 1.6rem; border-top: 4px solid var(--orange); transition: transform .15s, box-shadow .15s; }
+.press__card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(31,58,120,.15); }
+.press__src { font: 700 .8rem var(--f-head); letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.press__card strong { font: 800 1.15rem var(--f-head); color: var(--blue-d); line-height: 1.25; }
+.press__go { margin-top: auto; font-weight: 700; color: var(--orange); }
+.press__go::after { content: " \2192"; }
+.fb { display: flex; justify-content: center; margin-top: 2rem; max-width: 100%; overflow-x: auto; }
+.fb iframe { max-width: 100%; background: #fff; border-radius: var(--radius); }
+@media (max-width: 900px) { .press { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .press__card { transition: none; } }

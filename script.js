@@ -14,7 +14,7 @@
   });
 
   // Apparition au scroll
-  var targets = document.querySelectorAll(".card, .theme, .offer, .gallery figure, .facts div, .infos div, .mag, .promoter__in");
+  var targets = document.querySelectorAll(".card, .press__card, .theme, .offer, .gallery figure, .facts div, .infos div, .mag, .promoter__in");
   targets.forEach(function (el) { el.classList.add("reveal"); });
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
