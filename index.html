@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SAFIT 2027 | Salon Africain de la Finance et de l'Innovation Technologique</title>
-  <meta name="description" content="SAFIT 2027, 2ème édition : le salon africain de la finance inclusive et de l'innovation technologique. Mars - Avril 2027, Hôtel Azalaï, Ouagadougou.">
-  <meta property="og:title" content="SAFIT 2027 | 2ème édition, Ouagadougou">
-  <meta property="og:description" content="Finance inclusive, innovation technologique et rencontres B2B. Mars - Avril 2027, Hôtel Azalaï, Ouagadougou.">
+  <title>SAFIT 2027 | Bientôt en ligne, 2ème édition à Ouagadougou</title>
+  <meta name="description" content="SAFIT 2027, 2ème édition du Salon Africain de la Finance et de l'Innovation Technologique. Mars - Avril 2027, Hôtel Azalaï, Ouagadougou. Recevez le dossier de sponsoring.">
+  <meta property="og:title" content="SAFIT 2027 | Bientôt en ligne">
+  <meta property="og:description" content="2ème édition, Mars - Avril 2027, Hôtel Azalaï, Ouagadougou. Recevez le dossier de sponsoring.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/hero.jpg">
+  <meta property="og:image" content="https://www.safit-africa.com/assets/hero.jpg">
   <meta name="theme-color" content="#1f3a78">
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -16,38 +16,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="soon.css">
 </head>
 <body>
+<main class="soon">
+  <div class="soon__in">
+    <p class="soon__edition">2<sup>ème</sup> Édition</p>
+    <img class="soon__logo" src="assets/logo-safit-white.png" alt="SAFIT, Salon Africain de la Finance et de l'Innovation Technologique" width="520" height="185">
+    <h1 class="soon__title">Le site officiel arrive bientôt</h1>
 
-<header class="nav" id="top">
-  <div class="wrap nav__in">
-    <a href="#top" class="nav__brand" aria-label="SAFIT 2027, accueil">
-      <img src="assets/logo-safit-white.png" alt="SAFIT" width="96" height="34">
-    </a>
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-    <nav id="menu" class="nav__menu">
-      <a href="#salon">Le salon</a>
-      <a href="#themes">Thématiques</a>
-      <a href="#retro">Rétrospective</a>
-      <a href="#presse">Presse</a>
-      <a href="#partenariat">Partenariat</a>
-      <a href="#infos">Infos pratiques</a>
-      <a href="#contact" class="btn btn--sm">Devenir partenaire</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="wrap hero__in">
-    <p class="hero__edition">2<sup>ème</sup> Édition</p>
-    <img class="hero__logo" src="assets/logo-safit-white.png" alt="SAFIT" width="560" height="199">
-    <h1 class="hero__title">Salon Africain de la Finance et de l'Innovation Technologique</h1>
-    <p class="hero__lead">Le rendez-vous annuel entre la finance inclusive et l'industrie technologique burkinabè.</p>
-
-    <ul class="hero__facts">
+    <ul class="soon__facts">
       <li>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
         <span><strong>Mars - Avril 2027</strong><small>Dates exactes à confirmer</small></span>
@@ -58,315 +36,63 @@
       </li>
     </ul>
 
-    <div class="hero__cta">
-      <a href="#partenariat" class="btn">Voir les offres de partenariat</a>
-      <a href="#contact" class="btn btn--ghost">Nous contacter</a>
-      <a href="docs/SAFIT-2027-dossier-de-sponsoring.pdf" class="btn btn--ghost" download>Dossier de sponsoring (PDF)</a>
-    </div>
-    <p class="hero__tag">#SAFIT2027</p>
-  </div>
-</section>
+    <p class="soon__lead">Finance inclusive, innovation technologique et rencontres B2B. Laissez-nous votre e-mail pour recevoir le dossier de sponsoring et manifester votre intérêt.</p>
 
-<section class="stats" aria-label="Chiffres de l'édition 2026">
-  <div class="wrap stats__grid">
-    <div><b data-count="500" data-suffix="+">500+</b><span>Participants</span></div>
-    <div><b data-count="22">22</b><span>Stands</span></div>
-    <div><b data-count="10" data-suffix="+">10+</b><span>Panels d'experts</span></div>
-    <div><b data-count="1" data-suffix="M+">1M+</b><span>Personnes touchées</span></div>
-  </div>
-  <p class="stats__note">Édition 2026</p>
-</section>
+    <section class="card-form" id="interet" aria-labelledby="f-title">
+      <form id="soon-form" action="https://formspree.io/f/xkjorpbg" method="POST" novalidate>
+        <h2 id="f-title">Recevoir le dossier de sponsoring</h2>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <input type="hidden" name="_subject" value="SAFIT 2027 : intérêt (page bientôt en ligne)">
+        <input type="hidden" name="source" value="page-coming-soon">
 
-<section class="sec" id="salon">
-  <div class="wrap">
-    <p class="eyebrow">01 · Le salon</p>
-    <h2>Une plateforme, pas un simple événement</h2>
-    <p class="lead">Initiée par AFRICASOFT, elle rassemble les acteurs majeurs de la finance et des technologies en Afrique pour catalyser les synergies et le développement durable.</p>
-
-    <div class="chips">
-      <span>Finance inclusive</span>
-      <span>Innovation technologique</span>
-      <span>Rencontres B2B</span>
-    </div>
-
-    <h3 class="sub">Nos objectifs majeurs</h3>
-    <div class="cards cards--3">
-      <article class="card">
-        <span class="card__n">01</span>
-        <h4>Innovation tech</h4>
-        <p>Promouvoir le développement technologique des institutions burkinabè par l'implémentation de solutions digitales de pointe.</p>
-      </article>
-      <article class="card">
-        <span class="card__n">02</span>
-        <h4>Synergie &amp; rencontres</h4>
-        <p>Offrir un cadre exclusif d'exposition du savoir-faire et de rencontre B2B entre PME/PMI, IMF et grandes entreprises technologiques.</p>
-      </article>
-      <article class="card">
-        <span class="card__n">03</span>
-        <h4>Entrepreneuriat jeune</h4>
-        <p>Valoriser les projets des étudiants et favoriser la rencontre entre le monde académique et le monde professionnel.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tint" id="themes">
-  <div class="wrap">
-    <p class="eyebrow">Programme</p>
-    <h2>Thématiques 2027</h2>
-    <div class="themes">
-      <article class="theme">
-        <span class="theme__n">01</span>
-        <div>
-          <h3>IA, Big Data et technologies de rupture</h3>
-          <p>Comment ces technologies accélèrent la finance inclusive et déploient de nouveaux moyens de paiement résilients à travers l'Afrique.</p>
+        <label>E-mail professionnel *
+          <input name="email" type="email" autocomplete="email" required placeholder="vous@organisation.com">
+        </label>
+        <div class="row">
+          <label>Nom et prénom
+            <input name="nom" autocomplete="name">
+          </label>
+          <label>Organisation
+            <input name="org" autocomplete="organization">
+          </label>
         </div>
-      </article>
-      <article class="theme">
-        <span class="theme__n">02</span>
-        <div>
-          <h3>Écosystèmes digitaux fiables</h3>
-          <p>L'innovation technologique au service direct de l'inclusion financière durable et de la démocratisation des paiements digitaux.</p>
-        </div>
-      </article>
-    </div>
+        <label>Votre intérêt
+          <select name="interet">
+            <option>Exposer (stand)</option>
+            <option>Devenir sponsor</option>
+            <option>Annoncer dans le magazine</option>
+            <option>Participer en tant que visiteur</option>
+            <option>Presse / médias</option>
+            <option>Autre</option>
+          </select>
+        </label>
+        <label class="consent"><input type="checkbox" name="consentement" value="oui" required>
+          <span>J'accepte d'être recontacté par Africasoft au sujet du SAFIT 2027.</span>
+        </label>
+        <button class="btn" type="submit">Je veux le dossier</button>
+        <p class="note" id="soon-note" role="status"></p>
+      </form>
 
-    <h3 class="sub">Cibles &amp; participants</h3>
-    <div class="cards cards--4">
-      <article class="card card--light">
-        <h4>Le cœur financier</h4>
-        <p>Systèmes financiers décentralisés, institutions de microfinance, banques et assurances.</p>
-      </article>
-      <article class="card card--light">
-        <h4>L'écosystème technologique</h4>
-        <p>Entreprises IT, acteurs du numérique, fournisseurs de solutions logicielles et startups FinTech.</p>
-      </article>
-      <article class="card card--light">
-        <h4>Les moteurs économiques</h4>
-        <p>PME et PMI, grandes entreprises et organisations internationales.</p>
-      </article>
-      <article class="card card--light">
-        <h4>Les décideurs &amp; partenaires</h4>
-        <p>Institutions étatiques, organismes en charge de l'entreprise, mécènes et investisseurs locaux.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="promoter">
-  <div class="wrap promoter__in">
-    <img src="assets/promoteur.jpg" alt="Amevo Léon Houndjago, PDG de CAGECFI SA" width="280" height="325" loading="lazy">
-    <div>
-      <p class="eyebrow eyebrow--light">Le mot du promoteur</p>
-      <blockquote>
-        <p>« Au 21e siècle, les innovations technologiques occupent une place centrale dans le développement des Institutions de Microfinance et des PME/PMI. Le SAFIT s'impose dans cette dynamique comme l'événement de référence du secteur au Burkina Faso en Afrique. »</p>
-        <p>« Véritable vitrine de l'évolution digitale sous toutes ses formes, il se veut une plateforme de cohésion et d'engagement au service du développement national. »</p>
-        <footer><strong>Amevo Léon HOUNDJAGO</strong><span>PDG de CAGECFI SA</span></footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="retro">
-  <div class="wrap">
-    <p class="eyebrow">Rétrospective 2026</p>
-    <h2>Un succès qui appelle une suite ambitieuse</h2>
-    <div class="gallery">
-      <figure class="gallery__big"><img src="assets/retro-audience.jpg" alt="Le public applaudit lors de l'édition 2026" loading="lazy"></figure>
-      <figure><img src="assets/retro-collage.jpg" alt="Interventions et remise de distinction lors de l'édition 2026" loading="lazy"></figure>
-      <figure><img src="assets/retro-stand.jpg" alt="Visite d'un stand d'exposition lors de l'édition 2026" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--tint" id="presse">
-  <div class="wrap">
-    <p class="eyebrow">Presse &amp; réseaux sociaux</p>
-    <h2>Ils en ont parlé en 2026</h2>
-    <p class="lead">La 1ère édition (16 au 18 juillet 2026, Ouagadougou) vue par la presse et les réseaux sociaux.</p>
-
-    <div class="press">
-      <a class="press__card" href="https://lefaso.net/spip.php?article147914" target="_blank" rel="noopener">
-        <span class="press__src">Lefaso.net · 16 juillet 2026</span>
-        <strong>SAFIT : La première édition officiellement lancée</strong>
-        <span class="press__go">Lire l'article</span>
-      </a>
-      <a class="press__card" href="https://lefaso.net/spip.php?article147969" target="_blank" rel="noopener">
-        <span class="press__src">Lefaso.net · 19 juillet 2026</span>
-        <strong>SAFIT : Un dîner de gala pour clore la première édition</strong>
-        <span class="press__go">Lire l'article</span>
-      </a>
-      <a class="press__card" href="https://www.linkedin.com/feed/update/urn:li:activity:7483702681761427456" target="_blank" rel="noopener">
-        <span class="press__src">LinkedIn</span>
-        <strong>La publication SAFIT sur LinkedIn</strong>
-        <span class="press__go">Voir la publication</span>
-      </a>
-    </div>
-
-    <div class="fb">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Flefaso.net%2Fposts%2Fpfbid02u2LoGasSuMYXSpVWYt2wjxS4t2RRE9JoyrCFffJLEcP4rDqgkjKgwjbenBegDNwkl&amp;show_text=true&amp;width=500" title="Publication Facebook de Lefaso.net sur le SAFIT" width="500" height="792" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--dark" id="partenariat">
-  <div class="wrap">
-    <p class="eyebrow eyebrow--light">02 · Partenariat</p>
-    <h2>Quatre niveaux d'engagement</h2>
-    <p class="lead lead--light">Du stand d'exposition à l'exclusivité sectorielle.</p>
-    <p><a class="btn btn--ghost btn--dl" href="docs/SAFIT-2027-dossier-de-sponsoring.pdf" download>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        Télécharger le dossier de sponsoring <small>PDF, 22 Mo</small>
-      </a></p>
-
-    <div class="offers">
-      <article class="offer">
-        <h3>Bronze</h3>
-        <p class="offer__price">500 000 <small>FCFA</small></p>
-        <ul>
-          <li>Stand de 9 m²</li>
-          <li>5 badges</li>
-          <li>5 places au gala</li>
-        </ul>
-      </article>
-      <article class="offer">
-        <h3>Argent</h3>
-        <p class="offer__price">1 000 000 <small>FCFA</small></p>
-        <ul>
-          <li>Stand de 9 m²</li>
-          <li>5 badges</li>
-          <li>5 places au gala</li>
-          <li>Panel de 2 h + présentation</li>
-        </ul>
-      </article>
-      <article class="offer offer--gold">
-        <h3>Or</h3>
-        <p class="offer__price">3 000 000 <small>FCFA</small></p>
-        <ul>
-          <li>Stand de 9 m²</li>
-          <li>7 badges</li>
-          <li>10 places au gala</li>
-          <li>Discours d'ouverture + panel</li>
-        </ul>
-      </article>
-      <article class="offer offer--official">
-        <h3>Sponsor officiel</h3>
-        <p class="offer__price">10 M. <small>FCFA</small></p>
-        <ul>
-          <li><b>Exclusivité absolue</b> dans votre secteur d'activité</li>
-          <li><b>Emplacement VIP hyper-central</b> pour un stand sur-mesure</li>
-          <li><b>Couverture médiatique maximale</b> en TV, radio, presse et web</li>
-          <li><b>Prise de parole stratégique</b> aux cérémonies d'ouverture et de clôture</li>
-          <li><b>Insertion magazine premium</b> en couverture intérieure ou extérieure</li>
-          <li><b>Tous les avantages de l'offre Or</b>, inclus et décuplés</li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="mag">
-      <div class="mag__txt">
-        <h3>Le Magazine du SAFIT</h3>
-        <p class="mag__big">Une visibilité sans stand d'exposition</p>
-        <p>Le magazine du SAFIT est distribué à 100 % des participants, des décideurs et des institutions étatiques présentes au salon. Tirage : <strong>1 000 exemplaires</strong>.</p>
+      <div class="done" id="soon-done" hidden>
+        <h2>Merci, c'est noté !</h2>
+        <p>Votre intérêt est bien enregistré. L'équipe vous recontacte rapidement. Voici le dossier :</p>
+        <a class="btn" href="docs/SAFIT-2027-dossier-de-sponsoring.pdf" download>Télécharger le dossier de sponsoring <small>PDF, 22 Mo</small></a>
       </div>
-      <ul class="mag__prices">
-        <li><span>Article dédié</span><b>100 000 FCFA</b></li>
-        <li><span>Demi-page <small>19,5 × 13 cm</small></span><b>150 000 FCFA</b></li>
-        <li><span>Pleine page <small>19,5 × 26 cm</small></span><b>250 000 FCFA</b></li>
-      </ul>
-    </div>
+    </section>
+
+    <ul class="soon__stats" aria-label="Édition 2026">
+      <li><b>500+</b><span>participants en 2026</span></li>
+      <li><b>22</b><span>stands</span></li>
+      <li><b>10+</b><span>panels d'experts</span></li>
+    </ul>
+
+    <p class="soon__contact">
+      <a href="tel:+22672727131">+226 72 72 71 31</a> ·
+      <a href="mailto:africasoft@cagecfi.com">africasoft@cagecfi.com</a>
+    </p>
+    <p class="soon__org">Organisé par AFRICASOFT SARL, groupe CAGECFI · #SAFIT2027</p>
   </div>
-</section>
-
-<section class="sec" id="organisateur">
-  <div class="wrap">
-    <p class="eyebrow">Organisation</p>
-    <h2>Notoriété et confiance</h2>
-    <p class="lead">Organisé par AFRICASOFT SARL, filiale du groupe CAGECFI. Une présence construite dans la durée : des résultats mesurables, une certification qualité ISO 9001:2015 et une expertise reconnue des écosystèmes financiers régionaux.</p>
-    <div class="facts">
-      <div><b>17</b><span>Implantations africaines</span></div>
-      <div><b>25 ans</b><span>d'expertise depuis 2001</span></div>
-      <div><b>300+</b><span>Institutions digitalisées</span></div>
-      <div><b>500+</b><span>Clients accompagnés</span></div>
-    </div>
-    <img class="org-logo" src="assets/logo-cagecfi.png" alt="CAGECFI Informatique &amp; Management, certifié ISO 9001:2015" width="260" height="90" loading="lazy">
-  </div>
-</section>
-
-<section class="sec sec--tint" id="infos">
-  <div class="wrap">
-    <p class="eyebrow">Informations pratiques</p>
-    <h2>Rendez-vous à Ouagadougou</h2>
-    <dl class="infos">
-      <div><dt>Dates</dt><dd>Mars - Avril 2027</dd></div>
-      <div><dt>Lieu</dt><dd>Hôtel Azalaï, Ouagadougou</dd></div>
-      <div><dt>Organisation</dt><dd>AFRICASOFT SARL, groupe CAGECFI</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="sec sec--dark" id="contact">
-  <div class="wrap contact">
-    <div>
-      <p class="eyebrow eyebrow--light">Contact</p>
-      <h2>Rejoignez le SAFIT 2027</h2>
-      <p class="lead lead--light">Dites-nous quelle offre vous intéresse. L'équipe vous répond avec le dossier de sponsoring complet.</p>
-      <p><a class="btn btn--ghost btn--dl" href="docs/SAFIT-2027-dossier-de-sponsoring.pdf" download>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        Télécharger le dossier de sponsoring <small>PDF, 22 Mo</small>
-      </a></p>
-      <ul class="contact__list">
-        <li><span>Téléphone</span><a href="tel:+22672727131">+226 72 72 71 31</a></li>
-        <li><span>E-mail</span><a href="mailto:africasoft@cagecfi.com">africasoft@cagecfi.com</a></li>
-        <li><span>E-mail</span><a href="mailto:cagecfi@cagecfi.com">cagecfi@cagecfi.com</a></li>
-        <li><span>Site web</span><a href="https://www.safit-africa.com">www.safit-africa.com</a></li>
-      </ul>
-    </div>
-
-    <form class="form" id="contact-form" action="https://formspree.io/f/xkjorpbg" method="POST" novalidate>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
-      <input type="hidden" name="_subject" value="SAFIT 2027 : nouvelle demande de partenariat">
-      <label>Nom et prénom
-        <input name="nom" autocomplete="name" required>
-      </label>
-      <label>Organisation
-        <input name="org" autocomplete="organization" required>
-      </label>
-      <label>E-mail
-        <input name="email" type="email" autocomplete="email" required>
-      </label>
-      <label>Téléphone
-        <input name="tel" type="tel" autocomplete="tel">
-      </label>
-      <label>Offre souhaitée
-        <select name="offre">
-          <option>Bronze, 500 000 FCFA</option>
-          <option>Argent, 1 000 000 FCFA</option>
-          <option>Or, 3 000 000 FCFA</option>
-          <option>Sponsor officiel, 10 M. FCFA</option>
-          <option>Magazine du SAFIT</option>
-          <option>Je ne sais pas encore</option>
-        </select>
-      </label>
-      <label>Message
-        <textarea name="msg" rows="4"></textarea>
-      </label>
-      <button class="btn" type="submit">Envoyer ma demande</button>
-      <p class="form__note" id="form-note" role="status"></p>
-    </form>
-  </div>
-</section>
-
 </main>
-
-<footer class="foot">
-  <div class="wrap foot__in">
-    <img src="assets/logo-safit-white.png" alt="SAFIT" width="90" height="32" loading="lazy">
-    <p>AFRICASOFT SARL, Groupe CAGECFI<br>+226 72 72 71 31 · africasoft@cagecfi.com</p>
-    <p class="foot__tag">#SAFIT2027</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+<script src="soon.js"></script>
 </body>
 </html>
