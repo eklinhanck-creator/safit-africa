@@ -2,6 +2,18 @@
   var form = document.getElementById("soon-form");
   var note = document.getElementById("soon-note");
   var done = document.getElementById("soon-done");
+  // Lance le téléchargement automatiquement ; le lien visible reste le repli si le navigateur le bloque
+  function startDownload() {
+    var link = done.querySelector("a[download]");
+    if (!link) return;
+    var a = document.createElement("a");
+    a.href = link.href;
+    a.download = "";
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     note.className = "note";
@@ -26,6 +38,7 @@
         form.hidden = true;
         done.hidden = false;
         done.scrollIntoView({ block: "center" });
+        startDownload();
       })
       .catch(function () {
         note.className = "note bad";
