@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfect Vision | Core Banking pour la microfinance, par CAGECFI</title>
+<meta name="description" content="Perfect Vision, le core banking de CAGECFI pour la microfinance : un seul système, vos règles, un contrôle à chaque étape. Voyez la démo et demandez un atelier de paramétrage.">
+<meta name="theme-color" content="#0b2a4a">
+<meta property="og:title" content="Perfect Vision | Core Banking pour la microfinance">
+<meta property="og:description" content="Un seul système, vos règles, un contrôle à chaque étape. Démo vidéo et atelier de paramétrage.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b2a4a;--navy-2:#123e6b;--blue:#1486c8;--sky:#6cc4f0;--orange:#f7731c;--ink:#16263f;--muted:#5a6b82;--line:#dbe5ef;--bg:#f4f8fc;--white:#fff;--f-head:"Exo 2",system-ui,sans-serif;--f-body:"Montserrat",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f-body);color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+section{padding:72px 0}
+h1,h2,h3{font-family:var(--f-head);line-height:1.15;margin:0}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--navy);margin-bottom:.6rem}
+h3{font-size:1.15rem;color:var(--navy);margin-bottom:.4rem}
+.eyebrow{font:700 .78rem var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin:0 0 .6rem}
+.lead{color:var(--muted);max-width:64ch;margin:0 0 2rem;font-size:1.05rem}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font:700 .95rem var(--f-body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:var(--orange);color:#fff}
+.btn--primary:hover{background:#e0620f}
+.btn--ghost{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn--ghost:hover{background:rgba(255,255,255,.12)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.top__logo{height:40px;width:auto}
+.top nav{display:flex;gap:22px;align-items:center}
+.top nav a{font:600 .85rem var(--f-body);color:var(--navy);text-decoration:none}
+.top nav a:hover{color:var(--blue)}
+.top .btn{padding:.55rem 1.1rem;font-size:.85rem}
+@media(max-width:860px){.top nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(20,134,200,.55),transparent 60%),linear-gradient(160deg,var(--navy-2),var(--navy));color:#fff;padding:84px 0 72px}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
+.hero h1 span{color:var(--sky)}
+.hero p.sub{font-size:1.15rem;color:#d6e6f5;margin:1.2rem 0 1.6rem;max-width:52ch}
+.hero__tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.8rem;padding:0;list-style:none}
+.hero__tags li{padding:.35rem .85rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:.8rem;font-weight:600;color:#e8f3fc}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.vid{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);background:#000;aspect-ratio:1536/674}
+.vid video{width:100%;height:100%;display:block;object-fit:cover}
+.hero__note{font-size:.75rem;color:#a9c4de;margin:.7rem 0 0}
+@media(max-width:900px){.hero__grid{grid-template-columns:1fr}.hero{padding:56px 0}}
+
+/* stats */
+.stats{background:var(--bg);padding:36px 0;border-bottom:1px solid var(--line)}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.stats b{display:block;font:800 2.2rem var(--f-head);color:var(--blue)}
+.stats span{font-size:.85rem;color:var(--muted);font-weight:600}
+@media(max-width:700px){.stats ul{grid-template-columns:repeat(2,1fr)}}
+
+/* cards */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g3,.g4,.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 6px 18px rgba(11,42,74,.05)}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.card .n{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--navy);color:#fff;font:800 1rem var(--f-head);margin-bottom:.9rem}
+.card--accent{border-top:4px solid var(--blue)}
+.alt{background:var(--bg)}
+.dark{background:var(--navy);color:#fff}
+.dark h2,.dark h3{color:#fff}.dark .lead{color:#b9d0e6}
+
+/* promesses */
+.promesses .card ul,.checks{margin:.7rem 0 0;padding:0;list-style:none}
+.promesses li,.checks li{position:relative;padding-left:1.5rem;font-size:.92rem;color:var(--muted);margin:.35rem 0}
+.promesses li::before,.checks li::before{content:"";position:absolute;left:0;top:.5em;width:.7rem;height:.4rem;border-left:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:rotate(-45deg)}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.mods{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.mods{grid-template-columns:1fr}}
+.mods h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;color:var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:.6rem 0 0;list-style:none}
+.chips li{padding:.3rem .7rem;background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:.82rem;font-weight:600;color:var(--navy)}
+.socle{margin-top:20px;padding:16px 22px;border-radius:14px;background:var(--navy);color:#fff;text-align:center;font:700 1rem var(--f-head)}
+
+/* parcours */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:18px 16px}
+.steps b{display:block;font:800 1rem var(--f-head);color:var(--sky);margin-bottom:.3rem}
+.steps span{font-size:.88rem;color:#d0e2f2}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.steps--3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:700px){.steps--3{grid-template-columns:1fr}}
+.dark .tagline{margin-top:22px;text-align:center;font-weight:600;color:#fff}
+
+/* video section */
+.demo__box{max-width:980px;margin-inline:auto}
+.demo__box .vid{box-shadow:0 18px 50px rgba(11,42,74,.25)}
+.demo__cta{text-align:center;margin-top:28px}
+
+/* digital */
+.dig{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:800px){.dig{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.dig{grid-template-columns:1fr}}
+.dig div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.dig b{display:block;color:var(--navy);font:700 1rem var(--f-head)}
+.dig span{font-size:.86rem;color:var(--muted)}
+
+/* trust */
+.trust{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center}
+.trust img{background:#fff;border-radius:14px;padding:14px;border:1px solid var(--line)}
+@media(max-width:700px){.trust{grid-template-columns:1fr}.trust img{max-width:160px}}
+
+/* role */
+.role h3{font-size:1rem}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font:700 1rem var(--f-head);color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";font-size:1.3rem;color:var(--orange);line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:.7rem 0 0;color:var(--muted);font-size:.95rem}
+
+/* form */
+.formsec{background:linear-gradient(160deg,var(--navy-2),var(--navy));color:#fff}
+.formsec h2{color:#fff}.formsec .lead{color:#c3d9ee}
+.form{background:#fff;color:var(--ink);border-radius:20px;padding:32px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.form fieldset{border:0;margin:0 0 26px;padding:0}
+.form legend{font:800 1.05rem var(--f-head);color:var(--navy);padding:0;margin-bottom:12px;border-bottom:2px solid var(--orange);padding-bottom:4px;display:inline-block}
+.row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:640px){.row{grid-template-columns:1fr}.form{padding:22px 18px}}
+label.f{display:block;font-size:.82rem;font-weight:700;color:var(--navy)}
+label.f input,label.f select,label.f textarea{display:block;width:100%;margin-top:5px;padding:.7rem .85rem;border:1.5px solid var(--line);border-radius:10px;font:500 .95rem var(--f-body);color:var(--ink);background:#fff}
+label.f input:focus,label.f select:focus,label.f textarea:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(20,134,200,.2)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 14px}
+.opt{display:flex;align-items:flex-start;gap:.55rem;font-size:.9rem;padding:.55rem .75rem;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;line-height:1.35}
+.opt:hover{border-color:var(--blue)}
+.opt input{margin-top:.2rem;accent-color:var(--orange);width:1.05rem;height:1.05rem;flex:none}
+.opt small{display:block;color:var(--muted);font-size:.75rem}
+.help{font-size:.8rem;color:var(--muted);margin:-4px 0 10px}
+.hp{position:absolute;left:-9999px}
+.form .btn{width:100%;justify-content:center;font-size:1.05rem;padding:1rem}
+.msg{margin-top:14px;padding:12px 16px;border-radius:10px;font-size:.92rem;display:none}
+.msg.ok{display:block;background:#e6f6ec;color:#146c2e}.msg.err{display:block;background:#fdecec;color:#9b1c1c}
+.legal{font-size:.76rem;color:var(--muted);margin:12px 0 0;text-align:center}
+
+/* footer */
+footer{background:var(--navy);color:#b9d0e6;padding:36px 0;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer a{color:#fff}
+footer img{height:44px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:none}
+.sticky .btn{width:100%;justify-content:center}
+@media(max-width:700px){.sticky{display:block}body{padding-bottom:70px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a href="#top" aria-label="CAGECFI, accueil"><img class="top__logo" src="assets/logo-cagecfi.png" alt="CAGECFI Informatique et Management"></a>
+    <nav aria-label="Navigation principale">
+      <a href="#solution">Solution</a>
+      <a href="#demo">Démo vidéo</a>
+      <a href="#digital">Finance digitale</a>
+      <a href="#conformite">Conformité</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--primary" href="#besoins">Fiche de besoins</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow">Core Banking System · CAGECFI</p>
+      <h1>Perfect Vision, le core banking de la microfinance. <span>Un seul système, vos règles.</span></h1>
+      <p class="sub">Paramétrage sans développement, ERP tout-en-un, finance digitale et conformité intégrée. Un contrôle à chaque étape, du guichet à la comptabilité.</p>
+      <ul class="hero__tags">
+        <li>Paramétrage</li><li>ERP tout-en-un</li><li>Finance digitale</li><li>Conformité</li>
+      </ul>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#besoins">Remplir la fiche de besoins</a>
+        <a class="btn btn--ghost" href="#demo">&#9654; Voir la démo</a>
+      </div>
+    </div>
+    <div>
+      <div class="vid">
+        <video controls preload="metadata" poster="assets/demo-poster.jpg" playsinline aria-label="Démonstration générale de Perfect Vision">
+          <source src="assets/demo-perfect-vision.mp4" type="video/mp4">
+          Votre navigateur ne lit pas la vidéo. <a href="assets/demo-perfect-vision.mp4">Télécharger la démo</a>.
+        </video>
+      </div>
+      <p class="hero__note">Démo générale, voix de synthèse. Données de l'environnement de test.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES -->
+<div class="stats">
+  <div class="wrap">
+    <ul>
+      <li><b>2001</b><span>année de création de CAGECFI</span></li>
+      <li><b>+500</b><span>structures informatisées</span></li>
+      <li><b>20</b><span>pays couverts</span></li>
+      <li><b>107</b><span>collaborateurs</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 3 PROMESSES -->
+<section class="promesses">
+  <div class="wrap">
+    <p class="eyebrow">Votre enjeu</p>
+    <h2>Une institution de microfinance doit tenir trois promesses à la fois</h2>
+    <p class="lead">Croître, rester conforme, maîtriser. Perfect Vision les traite dans le même système.</p>
+    <div class="grid g3">
+      <div class="card card--accent"><h3>Croître</h3>
+        <ul><li>Diversifier l'épargne et le crédit</li><li>Ouvrir de nouveaux canaux digitaux</li><li>Ajouter des activités sans nouveau logiciel</li></ul></div>
+      <div class="card card--accent"><h3>Rester conforme</h3>
+        <ul><li>Lutte anti-blanchiment dès l'inscription</li><li>Déclarations et BIC</li><li>États prudentiels fiables</li></ul></div>
+      <div class="card card--accent"><h3>Maîtriser</h3>
+        <ul><li>Accès et droits contrôlés</li><li>Caisse et opérations encadrées</li><li>Risque de crédit suivi de près</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 PILIERS -->
+<section class="alt" id="solution">
+  <div class="wrap">
+    <p class="eyebrow">Notre réponse</p>
+    <h2>Quatre piliers</h2>
+    <p class="lead">Vingt-cinq ans d'expérience métier, aujourd'hui en version web sur une architecture en trois tiers.</p>
+    <div class="grid g4">
+      <div class="card"><span class="n">1</span><h3>Haut degré de paramétrage</h3><p>Produits, frais, circuits de validation et plafonds se règlent par vous, sans développement.</p></div>
+      <div class="card"><span class="n">2</span><h3>ERP tout-en-un</h3><p>Du guichet à la paie : un seul socle, avec des modules additionnels activables.</p></div>
+      <div class="card"><span class="n">3</span><h3>Finance digitale</h3><p>Interopérabilité, mobile money et SMS banking pilotés dans le même système.</p></div>
+      <div class="card"><span class="n">4</span><h3>Conformité intégrée</h3><p>LBC-FT, BIC et reporting prudentiel au cœur de l'inscription et des opérations.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Un seul socle</p>
+    <h2>Des modules qui s'ajoutent, sans nouveau logiciel</h2>
+    <p class="lead">Un client, une base, une comptabilité. Vous activez ce dont vous avez besoin, quand vous en avez besoin.</p>
+    <div class="mods">
+      <div class="card"><h3>Standard</h3><ul class="chips"><li>Adhésion</li><li>Épargne</li><li>Tontine</li><li>Crédit</li><li>Caisse</li><li>Comptabilité</li></ul></div>
+      <div class="card"><h3>Additionnels</h3><ul class="chips"><li>Engagement</li><li>Immobilisations</li><li>Stock</li><li>Ressources humaines</li><li>Paie</li><li>Budget</li></ul></div>
+      <div class="card"><h3>Digital</h3><ul class="chips"><li>SMS banking</li><li>WhatsApp banking</li><li>Mobile et e-banking</li><li>Agency banking</li></ul></div>
+      <div class="card"><h3>Reporting et conformité</h3><ul class="chips"><li>États financiers</li><li>BIC</li><li>BCRG</li><li>LBC-FT</li></ul></div>
+    </div>
+    <div class="card" style="margin-top:20px"><h3>Finance islamique, dans une application dédiée</h3>
+      <ul class="chips"><li>Mourabaha</li><li>Moucharaka</li><li>Salam</li><li>Moudaraba</li><li>Istisna</li><li>Ijara</li></ul></div>
+    <div class="socle">Socle commun : un client, une base, une comptabilité</div>
+  </div>
+</section>
+
+<!-- DEMO VIDEO -->
+<section class="alt" id="demo">
+  <div class="wrap demo__box center">
+    <p class="eyebrow">Démonstration</p>
+    <h2>Voyez Perfect Vision à l'œuvre</h2>
+    <p class="lead">Inscription, épargne, caisse, crédit, conformité : le parcours complet dans l'application.</p>
+    <div class="vid">
+      <video controls preload="none" poster="assets/demo-poster.jpg" playsinline aria-label="Démonstration générale complète de Perfect Vision">
+        <source src="assets/demo-perfect-vision.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="demo__cta">
+      <a class="btn btn--primary" href="#besoins">Je veux cette démo sur mes produits</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS CLIENT -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Parcours client</p>
+    <h2>De bout en bout, zéro ressaisie</h2>
+    <p class="lead">La même fiche client alimente l'épargne, la caisse, le crédit et la comptabilité.</p>
+    <ol class="steps">
+      <li><b>1 · Inscription</b><span>Une fiche complète, des contrôles intégrés</span></li>
+      <li><b>2 · Épargne</b><span>Des produits à vos règles</span></li>
+      <li><b>3 · Caisse</b><span>Un guichet encadré</span></li>
+      <li><b>4 · Crédit</b><span>Du dossier à la décision</span></li>
+      <li><b>5 · Comptabilité</b><span>Alimentée par les opérations</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FONCTIONNALITES -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Au quotidien</p>
+    <h2>Ce que vos équipes y gagnent</h2>
+    <p class="lead">Des contrôles qui suivent votre organisation, pas l'inverse.</p>
+    <div class="grid g2">
+      <div class="card"><h3>Clientèle, épargne et tontine</h3>
+        <ul class="checks"><li>Une fiche client unique pour tous les produits</li><li>Dépôt à vue, dépôt à terme, plan d'épargne, tontine</li><li>Comptes protégés : liste noire, biométrie</li></ul></div>
+      <div class="card"><h3>Crédit et finance islamique</h3>
+        <ul class="checks"><li>Simulation avant engagement, circuit de validation à vos niveaux</li><li>Décision tracée, du dossier au déblocage</li><li>Balance âgée, déclassement et provisions</li></ul></div>
+      <div class="card"><h3>Caisse, agences et opérations</h3>
+        <ul class="checks"><li>Multi-caisses, multi-agences, données consolidées</li><li>Plafonds par caisse et par type d'opération</li><li>Collecte mobile rattachée à la base centrale</li></ul></div>
+      <div class="card"><h3>Comptabilité et ERP intégrés</h3>
+        <ul class="checks"><li>Les opérations alimentent la comptabilité sans ressaisie</li><li>Ressources humaines, paie, immobilisations, stocks</li><li>Une seule base, un seul socle de sécurité et de droits</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIGITAL -->
+<section class="alt" id="digital">
+  <div class="wrap">
+    <p class="eyebrow">Finance digitale</p>
+    <h2>Neuf solutions pour digitaliser vos produits et services</h2>
+    <p class="lead">Vos clients vous joignent où ils sont. Nos solutions digitalisent vos process, sur de nouveaux canaux de distribution.</p>
+    <div class="dig">
+      <div><b>Mobile Agency</b><span>Collecte mobile par vos agents</span></div>
+      <div><b>Web Agency</b><span>Réseau d'agents partenaires</span></div>
+      <div><b>Mobile Banking : Mobile Money</b><span>Agrégation avec les opérateurs mobiles</span></div>
+      <div><b>Mobile Banking : suivi des comptes</b><span>Application pour vos membres</span></div>
+      <div><b>WhatsApp Banking</b><span>Gestion des comptes par WhatsApp</span></div>
+      <div><b>SMS Banking</b><span>Notifications et relances aux clients</span></div>
+      <div><b>E-Banking</b><span>Suivi des comptes sur le web</span></div>
+      <div><b>Vision-Transfert</b><span>Votre propre marque de transfert d'argent</span></div>
+      <div><b>Monétique</b><span>Interfaçage avec les GAB et TPE</span></div>
+    </div>
+    <p class="help" style="margin-top:14px">Périmètre et opérateurs à confirmer par pays.</p>
+  </div>
+</section>
+
+<!-- CONFORMITE & SECURITE -->
+<section id="conformite">
+  <div class="wrap">
+    <p class="eyebrow">Conformité et sécurité</p>
+    <h2>Des remises fiables, des accès maîtrisés</h2>
+    <p class="lead">Les états réglementaires sont issus des mêmes écritures. Les droits sont validés, les traces conservées.</p>
+    <div class="grid g3">
+      <div class="card card--accent"><h3>LBC-FT</h3>
+        <ul class="checks"><li>Cotation du risque : rouge, orange, bleu</li><li>Recherche OFAC et liste noire</li><li>Alertes traitées, déclaration de soupçon au format CENTIF</li></ul></div>
+      <div class="card card--accent"><h3>BIC et reporting prudentiel</h3>
+        <ul class="checks"><li>Consentement du client enregistré, variante BIC-CEMAC</li><li>Ratios prudentiels, états annexes, fichier BCRG</li><li>Conformité aux normes BCEAO, CEMAC et BCC</li></ul></div>
+      <div class="card card--accent"><h3>Sécurité</h3>
+        <ul class="checks"><li>Profils et habilitations validés séparément</li><li>Piste d'audit, sauvegarde et restauration</li><li>API REST et SOAP, ISO 8583, VPN, VSAT, BLR</li></ul></div>
+    </div>
+    <p class="help" style="margin-top:14px">Les remises dépendent du pays (CENTIF, BCRG, BIC-CEMAC, Ghana…). Périmètre à confirmer avec vous.</p>
+  </div>
+</section>
+
+<!-- CONFIANCE -->
+<section class="alt">
+  <div class="wrap">
+    <div class="trust">
+      <img src="assets/iso9001.png" alt="Certification TÜV Austria Hellas EN ISO 9001:2015" width="200" height="214">
+      <div>
+        <p class="eyebrow">Ils nous font confiance</p>
+        <h2>Plus de 500 structures informatisées dans 20 pays</h2>
+        <p class="lead" style="margin-bottom:1rem">Mutuelles, coopératives, sociétés et établissements de microfinance, ONG à volet crédit, mais aussi des programmes institutionnels : PNUD/UNCDF, Université de Lomé, UEMOA, PNUD Guinée et Banque Centrale de la République de Guinée.</p>
+        <ul class="checks">
+          <li>Certification ISO 9001 version 2015 (2019)</li>
+          <li>Certification ISO GIMAC, norme ISO 8583 (2020)</li>
+          <li>Homologation à GIMAC Pay, intégration à PI-SPI (BCEAO)</li>
+          <li>Palme de l'entreprise la plus dynamique d'Afrique de l'Ouest en digitalisation (2022)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CE QUE CA CHANGE -->
+<section class="role">
+  <div class="wrap">
+    <p class="eyebrow">Ce que ça change pour vous</p>
+    <h2>Chaque métier y trouve son compte</h2>
+    <div class="grid g4" style="margin-top:24px">
+      <div class="card"><h3>Direction</h3><p>Un seul système du guichet à la comptabilité, et un tableau d'évolution du portefeuille à risque.</p></div>
+      <div class="card"><h3>Risque et conformité</h3><p>Alertes, balance âgée, états annexes et déclarations dans le même outil.</p></div>
+      <div class="card"><h3>Opérations</h3><p>Zéro ressaisie, simulation avant engagement, caisse encadrée.</p></div>
+      <div class="card"><h3>Informatique</h3><p>Paramétrage sans développement, modules activables, droits validés.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ATELIER -->
+<section class="dark">
+  <div class="wrap">
+    <p class="eyebrow">Notre proposition</p>
+    <h2>Un atelier de paramétrage sur vos propres produits</h2>
+    <p class="lead">Le prochain pas : voir Perfect Vision tourner avec vos règles, pas avec celles d'une démo.</p>
+    <ol class="steps steps--3">
+      <li><b>1 · Cadrer votre périmètre</b><span>Modules, agences, produits, canaux digitaux</span></li>
+      <li><b>2 · Paramétrer 2 ou 3 de vos produits</b><span>En atelier, avec vos règles et vos circuits de validation</span></li>
+      <li><b>3 · Rejouer votre parcours client</b><span>Sur votre configuration, de l'inscription à la conformité</span></li>
+    </ol>
+    <p class="tagline"><a class="btn btn--primary" href="#besoins" style="margin-top:8px">Planifier l'atelier</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow">Questions fréquentes</p>
+    <h2>Vous vous demandez peut-être</h2>
+    <div style="margin-top:24px">
+      <details><summary>Notre processus est spécifique</summary><p>Produits, frais, circuits de validation et plafonds se paramètrent. Nous le montrons en atelier.</p></details>
+      <details><summary>Et la reprise de nos données ?</summary><p>Des écrans d'import existent (opérations, découverts, dossiers). Méthode et délais à cadrer ensemble.</p></details>
+      <details><summary>Pourquoi un ERP unique ?</summary><p>Une base unique : pas de réconciliation entre crédit, caisse, comptabilité, paie et immobilisations.</p></details>
+      <details><summary>Et la conformité chez nous ?</summary><p>Les remises varient selon le pays (CENTIF, BCRG, BIC-CEMAC…). Périmètre à confirmer avec votre équipe.</p></details>
+      <details><summary>Et le mobile et le digital ?</summary><p>Neuf solutions : agency banking, mobile et e-banking, WhatsApp, SMS, transfert d'argent, monétique. Périmètre et opérateurs à confirmer par pays.</p></details>
+      <details><summary>Quelle infrastructure prévoir ?</summary><p>Production en trois serveurs (base de données, application, solutions digitales), test en trois machines virtuelles ou un serveur unique. Hébergement possible en cloud CAGECFI mutualisé, dédié ou privé : indiquez votre préférence dans la fiche de besoins.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section class="formsec" id="besoins">
+  <div class="wrap" style="max-width:900px">
+    <div class="center">
+      <p class="eyebrow">Fiche de recueil des besoins</p>
+      <h2>Parlons de votre projet</h2>
+      <p class="lead">Cinq minutes pour cadrer votre périmètre. Nous revenons vers vous avec une proposition d'atelier de paramétrage.</p>
+    </div>
+
+    <form class="form" id="needs-form" action="" method="POST" novalidate>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <fieldset>
+        <legend>1 · Votre institution</legend>
+        <div class="row">
+          <label class="f">Nom de l'institution *<input type="text" name="institution" required autocomplete="organization"></label>
+          <label class="f">Pays<input type="text" name="pays" autocomplete="country-name"></label>
+          <label class="f">Nombre d'agences<input type="number" name="agences" min="0" inputmode="numeric"></label>
+          <label class="f">Nombre d'utilisateurs<input type="number" name="utilisateurs" min="0" inputmode="numeric"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2 · Architecture et hébergement</legend>
+        <p class="help">Architecture technique</p>
+        <div class="opts" style="margin-bottom:14px">
+          <label class="opt"><input type="radio" name="architecture" value="Centralisée"><span>Centralisée</span></label>
+          <label class="opt"><input type="radio" name="architecture" value="Décentralisée"><span>Décentralisée</span></label>
+        </div>
+        <p class="help">Mode d'hébergement</p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="hebergement" value="Cloud CAGECFI mutualisé"><span>Cloud CAGECFI mutualisé</span></label>
+          <label class="opt"><input type="radio" name="hebergement" value="Cloud CAGECFI dédié"><span>Cloud CAGECFI dédié</span></label>
+          <label class="opt"><input type="radio" name="hebergement" value="Cloud privé"><span>Cloud privé</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3 · Fonctionnalités standards</legend>
+        <p class="help">Cochez les modules qui vous intéressent.</p>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion des paramètres"><span>Gestion des paramètres</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion de la clientèle"><span>Gestion de la clientèle</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion de l'épargne"><span>Gestion de l'épargne</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion de la caisse"><span>Gestion de la caisse</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion du crédit"><span>Gestion du crédit</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion de la tontine"><span>Gestion de la tontine</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Gestion de la comptabilité"><span>Gestion de la comptabilité</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="États financiers"><span>États financiers</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="Finance islamique"><span>Finance islamique</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="BIC"><span>BIC</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="LBC-FT"><span>LBC-FT</span></label>
+          <label class="opt"><input type="checkbox" name="standard" value="PI-SPI BCEAO"><span>PI-SPI BCEAO</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4 · Fonctionnalités additionnelles</legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="additionnel" value="Ressources humaines et paie"><span>Ressources humaines et paie</span></label>
+          <label class="opt"><input type="checkbox" name="additionnel" value="Immobilisations"><span>Gestion des immobilisations</span></label>
+          <label class="opt"><input type="checkbox" name="additionnel" value="Stocks"><span>Gestion des stocks</span></label>
+          <label class="opt"><input type="checkbox" name="additionnel" value="Performance sociale"><span>Gestion de la performance sociale</span></label>
+          <label class="opt"><input type="checkbox" name="additionnel" value="Factsheet"><span>Factsheet</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>5 · Solutions de finance digitale</legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="digital" value="Mobile Agency"><span>Mobile Agency<small>collecte mobile</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="Mobile Banking"><span>Mobile Banking<small>suivi de comptes clients</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="SMS Banking"><span>SMS Banking<small>notification des transactions</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="Mobile Money"><span>Mobile Money<small>agrégation avec les opérateurs</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="E-Banking"><span>E-Banking<small>plateforme web de suivi de comptes</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="Réseau d'agents"><span>Réseau d'agents<small>agents partenaires</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="Monétique"><span>Monétique<small>interface GAB et TPE</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="WhatsApp Banking"><span>WhatsApp Banking<small>suivi des comptes</small></span></label>
+          <label class="opt"><input type="checkbox" name="digital" value="Vision-Transfert"><span>Transfert d'argent<small>marque blanche</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>6 · Vos coordonnées</legend>
+        <div class="row">
+          <label class="f">Nom et prénom *<input type="text" name="nom" required autocomplete="name"></label>
+          <label class="f">Fonction<input type="text" name="fonction" autocomplete="organization-title"></label>
+          <label class="f">E-mail professionnel *<input type="email" name="email" required autocomplete="email"></label>
+          <label class="f">Téléphone ou WhatsApp<input type="tel" name="telephone" autocomplete="tel"></label>
+        </div>
+        <label class="f" style="margin-top:14px">Précisions, contraintes, calendrier<textarea name="message" rows="4"></textarea></label>
+      </fieldset>
+
+      <button class="btn btn--primary" type="submit">Envoyer ma fiche de besoins</button>
+      <div class="msg" id="form-msg" role="status" aria-live="polite"></div>
+      <p class="legal">Vos informations servent uniquement à préparer votre atelier de paramétrage avec CAGECFI.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-cagecfi.png" alt="CAGECFI">
+    <div>
+      <strong style="color:#fff">CAGECFI</strong> · Cabinet de Gestion, de Conseils en Finance et d'Informatique<br>
+      Siège social : Lomé, Togo · <a href="mailto:cagecfi@cagecfi.com">cagecfi@cagecfi.com</a> · <a href="https://www.cagecfi.com">www.cagecfi.com</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn btn--primary" href="#besoins">Remplir la fiche de besoins</a></div>
+
+<script>
+(function () {
+  // Renseigner ici l'URL du service de collecte (ex. Formspree). Vide = envoi par e-mail.
+  var ENDPOINT = "";
+  var MAIL = "cagecfi@cagecfi.com";
+  var form = document.getElementById("needs-form");
+  var msg = document.getElementById("form-msg");
+
+  function show(cls, text) { msg.className = "msg " + cls; msg.textContent = text; }
+
+  function collect() {
+    var out = [], seen = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || el.name === "_gotcha" || el.type === "submit" || seen[el.name]) return;
+      seen[el.name] = 1;
+      var vals = Array.prototype.filter.call(form.elements[el.name].length ? form.elements[el.name] : [el], function (i) {
+        return (i.type === "checkbox" || i.type === "radio") ? i.checked : i.value.trim();
+      }).map(function (i) { return i.value.trim(); });
+      if (vals.length) out.push([el.name, vals.join(", ")]);
+    });
+    return out;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.elements._gotcha.value) return;
+    var inst = form.elements.institution, nom = form.elements.nom, mail = form.elements.email;
+    if (!inst.value.trim() || !nom.value.trim() || !/^\S+@\S+\.\S+$/.test(mail.value.trim())) {
+      show("err", "Renseignez le nom de l'institution, votre nom et un e-mail valide.");
+      (!inst.value.trim() ? inst : !nom.value.trim() ? nom : mail).focus();
+      return;
+    }
+    var fields = collect();
+    var subject = "Fiche de besoins Perfect Vision : " + inst.value.trim();
+    var body = fields.map(function (f) { return f[0] + " : " + f[1]; }).join("\n");
+
+    function fallback() {
+      window.location.href = "mailto:" + MAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      show("ok", "Votre messagerie s'ouvre avec la fiche pré-remplie. Envoyez le message pour finaliser.");
+    }
+    if (!ENDPOINT) return fallback();
+
+    var d = new FormData(form);
+    d.append("_subject", subject);
+    fetch(ENDPOINT, { method: "POST", body: d, headers: { Accept: "application/json" } })
+      .then(function (r) {
+        if (!r.ok) throw new Error();
+        form.reset();
+        show("ok", "Merci. Votre fiche est bien reçue, nous revenons vers vous rapidement.");
+      })
+      .catch(fallback);
+  });
+})();
+</script>
+</body>
+</html>
